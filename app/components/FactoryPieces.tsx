@@ -19,7 +19,15 @@ export const Recruiters = createComponent({
 export const Resumes = createComponent({
     name: "Resumes",
     initialCost: 400,
-    incrementRate: 1.13,
+    incrementRate: 1.2,
     threshold: 500,
     timerRate: (quantity) => (quantity > 0 ? 39 / quantity : 1000),
+});
+
+export const CoverLetters = createComponent({
+    name: "Cover Letters",
+    initialCost: 1900,
+    incrementRate: 1.35,
+    threshold: 2300,
+    timerRate: (quantity) => (quantity > 0 ? 6 / quantity : 1000),
 });

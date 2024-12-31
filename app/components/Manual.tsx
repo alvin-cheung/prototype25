@@ -4,11 +4,11 @@ import { Button } from 'primereact/button';
 
 type ChildComponentProps = {
     count: number;
-    setCount: Function;
+    setCount: React.Dispatch<React.SetStateAction<number>>;
 };
 
 export default function Manual({ count, setCount } 
-    :ChildComponentProps
+    : ChildComponentProps
     ) {
     
     const handleKeyDown = () => {
@@ -16,7 +16,7 @@ export default function Manual({ count, setCount }
     }
 
     return (
-        <Button label="Click to apply to jobs" onKeyDown={handleKeyDown} onClick={handleKeyDown}>
+        <Button className="h-32 absolute inset-x-0 bottom-0 justify-center text-center self-center m-9 text-lg" label="Click to apply to jobs" onKeyDown={handleKeyDown} onClick={handleKeyDown}>
             <br></br> <br></br>
         </Button>
     )

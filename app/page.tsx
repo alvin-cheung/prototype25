@@ -1,11 +1,12 @@
 "use client"
 // import Image from "next/image";
-import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-import Manual from "./components/Manual";
-import Counter from "./components/Counter";
-import { JobBoards } from "./components/FactoryPieces";
-import { Recruiters } from "./components/FactoryPieces";
-import { Resumes } from './components/FactoryPieces';
+// import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+
+import Counter from './components/Counter';
+// import LeftContainer from './components/LeftContainer';
+import RightContainer from './components/RightContainer';
+import Manual from './components/Manual';
+
 import {useState} from "react";
         
 
@@ -13,24 +14,12 @@ export default function Home() {
 
   const [count, setCount] = useState(0);
 
-
-    // type UnitCardProps = {
-    //     id: number;
-    //     name: string;
-    //     count_threshold: number;
-    //     unit_cost: number;
-    //     cost_multiplier: number;
-        // count: number;
-        // setCount: React.Dispatch<React.SetStateAction<number>>;
-    // }
-
   return (
     <div>
-      <Counter count={count}></Counter>
-      <Manual count={count} setCount={setCount} ></Manual>
-      <JobBoards count={count} setCount={setCount} ></JobBoards>
-      <Recruiters count={count} setCount={setCount}></Recruiters>
-      <Resumes count={count} setCount={setCount}></Resumes>
+      <Counter count={count} setCount={setCount}></Counter>
+      {/* <LeftContainer count={count} setCount={setCount} ></LeftContainer> */}
+      <RightContainer count={count} setCount={setCount} ></RightContainer>
+      <Manual count={count} setCount={setCount}></Manual>
     </div>
     
 

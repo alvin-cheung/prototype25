@@ -39,7 +39,7 @@ export function createComponent({
             }, timerRate(quantity));
             
             return () => clearInterval(tick);
-        }, [quantity, count, setCount, timerRate]);
+        }, [quantity, count, setCount]);
         
         // Increment function
         const increment = () => {
@@ -54,10 +54,11 @@ export function createComponent({
         if (!isUnlocked) return null;
 
         return (
-            <button onClick={increment}>
+            <Button className="m-2" onClick={increment}>
                 {name}: {quantity}
+                <br></br>
                 Focus cost: {cost}
-            </button>
+            </Button>
         );
     };
 }
